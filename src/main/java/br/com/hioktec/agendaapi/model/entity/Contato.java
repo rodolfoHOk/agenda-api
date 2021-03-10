@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 
@@ -33,4 +34,8 @@ public class Contato {
 	
 	@Column
 	private Boolean favorito;
+	
+	@Column
+	@Lob // diz ao banco de dados que é um array de bytes
+	private byte[] foto;
 }
